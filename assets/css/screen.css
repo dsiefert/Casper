@@ -441,20 +441,19 @@ margin on the iframe, cause it breaks stuff. */
 }
 
 .skiplink {
-	display: none;
+	position: absolute;
+	top: 0;
+	left: -1000px;
+	z-index: 11;
 	color: #000;
 	background-color: #fff;
 	border: 1px solid black;
 	padding: 3px;
-	position: absolute;
-	top: 0;
-	left: 0;
-	z-index: 11;
 	font-family: sans-serif;
 }
 
 .skiplink:active, .skiplink:focus {
-	display: block;
+	left: 0px;
 }
 
 /* ==========================================================================
