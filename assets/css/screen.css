@@ -453,7 +453,7 @@ margin on the iframe, cause it breaks stuff. */
 	font-family: sans-serif;
 }
 
-.skiplink:active {
+.skiplink:active, .skiplink:focus {
 	display: block;
 }
 
