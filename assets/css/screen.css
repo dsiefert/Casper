@@ -25,7 +25,7 @@
    0. normalize.css v3.0.3 | MIT License | git.io/normalize | (minified)
    ========================================================================== */
 
-html { 
+html {
     font-family: sans-serif;
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%
@@ -71,7 +71,7 @@ button, input, optgroup, select, textarea {
 }
 button { overflow: visible; }
 button, select { text-transform: none; }
-button, html input[type="button"], 
+button, html input[type="button"],
 input[type="reset"], input[type="submit"] {
     -webkit-appearance: button;
     cursor: pointer;
@@ -207,7 +207,7 @@ h4, h5, h6 {
     -webkit-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
     -moz-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
     -o-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
-    color: #2E2E2E;
+    color: #9000c0;
     line-height: 1.15em;
     margin: 0 0 0.4em 0;
     font-family: "Open Sans", sans-serif;
@@ -440,6 +440,20 @@ margin on the iframe, cause it breaks stuff. */
     margin: 0;
 }
 
+.skiplink {
+	display: none;
+	color: #000;
+	background-color: #fff;
+	border: 1px solid black;
+	padding: 3px;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.skiplink:active {
+	display: block;
+}
 
 /* ==========================================================================
    3. Utilities - These things get used a lot
@@ -454,11 +468,9 @@ margin on the iframe, cause it breaks stuff. */
 .clearfix:after { clear: both; }
 .clearfix { zoom: 1; }
 
-/* Hides shit */
+/* whoever wrote the original here is dumb as fuck */
 .hidden {
     text-indent: -9999px;
-    visibility: hidden;
-    display: none;
 }
 
 /* Creates a responsive wrapper that makes our content scale nicely */
@@ -817,7 +829,6 @@ body.nav-opened .nav {
 
 /* When the navigation is closed */
 .nav-closed .menu-button {
-    color: #fff;
     border-color: rgba(255, 255, 255, 0.6);
 }
 .nav-closed .menu-button:hover {
@@ -827,7 +838,6 @@ body.nav-opened .nav {
 /* When the navigation is closed and there is no cover image */
 .nav-closed .no-cover .menu-button {
     border-color: #BFC8CD;
-    color: #9EABB3;
 }
 .nav-closed .no-cover .menu-button:hover {
     border-color: #555;
@@ -872,7 +882,6 @@ body.nav-opened .nav {
     letter-spacing: -1px;
     font-weight: 700;
     font-family: "Open Sans", sans-serif;
-    color: #fff;
 }
 
 .page-description {
@@ -882,21 +891,13 @@ body.nav-opened .nav {
     font-weight: 400;
     font-family: "Merriweather", serif;
     letter-spacing: 0.01rem;
-    color: rgba(255,255,255,0.8);
+    color: #000;
 }
 
 .no-cover.main-header {
     min-height: 160px;
     max-height: 40vh;
     background: #f5f8fa;
-}
-
-.no-cover .page-title {
-    color: rgba(0,0,0,0.8);
-}
-
-.no-cover .page-description {
-    color: rgba(0,0,0,0.5);
 }
 
 /* Add subtle load-in animation for content on the home page */
@@ -947,6 +948,11 @@ body:not(.post-template) .post-title {
 
 .post-title a {
     text-decoration: none;
+		color: #9000c0;
+}
+
+.post-title a:hover {
+	color: #a000d0;
 }
 
 .post-excerpt p {
@@ -965,7 +971,7 @@ body:not(.post-template) .post-title {
     font-family: "Open Sans", sans-serif;
     font-size: 1.5rem;
     line-height: 2.2rem;
-    color: #9EABB3;
+    color: #9000c0;
 }
 
 .author-thumb {
@@ -977,7 +983,7 @@ body:not(.post-template) .post-title {
 }
 
 .post-meta a {
-    color: #9EABB3;
+    color: #9000c0;
     text-decoration: none;
 }
 
@@ -1123,6 +1129,7 @@ body:not(.post-template) .post-title {
     margin: 6rem 0 0 0;
     padding: 6rem 0 0 0;
     border-top: #EBF2F6 1px solid;
+		height: 100px;
 }
 
 .post-footer h4 {
@@ -1144,11 +1151,11 @@ body:not(.post-template) .post-title {
     font-size: 1.4rem;
     line-height: 1;
     font-style: italic;
-    color: #9EABB3;
+    color: #9000c0;
 }
 
 .author-meta a {
-    color: #9EABB3;
+    color: #9000c0;
 }
 .author-meta a:hover {
     color: #111;
@@ -1160,7 +1167,7 @@ body:not(.post-template) .post-title {
 }
 
 .post-footer h4 a {
-    color: #2e2e2e;
+    color: #9000c0;
     text-decoration: none;
 }
 
@@ -1182,8 +1189,7 @@ body:not(.post-template) .post-title {
 .post-footer .share a {
     font-size: 1.8rem;
     display: inline-block;
-    margin: 1rem 1.6rem 1.6rem 0;
-    color: #BBC7CC;
+    margin: 1rem 1.6rem 0 0;
     text-decoration: none;
 }
 
@@ -1431,10 +1437,6 @@ body:not(.post-template) .post-title {
     border-color: rgba(0,0,0,0.2);
 }
 
-.read-next-story.no-cover h2 {
-    color: rgba(0,0,0,0.8);
-}
-
 .read-next-story.no-cover p {
     color: rgba(0,0,0,0.5);
 }
@@ -1491,12 +1493,12 @@ body:not(.post-template) .post-title {
     margin: 4rem auto;
     font-family: "Open Sans", sans-serif;
     font-size: 1.3rem;
-    color: #9EABB3;
+    color: #9000c0;
     text-align: center;
 }
 
 .pagination a {
-    color: #9EABB3;
+    color: #9000c0;
     transition: all 0.2s ease;
 }
 
@@ -1576,11 +1578,9 @@ body:not(.post-template) .post-title {
     font-family: "Open Sans", sans-serif;
     font-size: 1rem;
     line-height: 1.75em;
-    color: #BBC7CC;
 }
 
 .site-footer a {
-    color: #BBC7CC;
     text-decoration: none;
     font-weight: bold;
 }
@@ -1779,11 +1779,11 @@ body:not(.post-template) .post-title {
         padding: 0 5px;
         border-radius: 0;
         border-width: 0;
-        color: #2e2e2e;
+        color: #9000c0;
         background: transparent;
     }
     .menu-button:hover {
-        color: #2e2e2e;
+        color: #9000d0;
         border-color: transparent;
         background: none;
     }
